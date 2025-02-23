@@ -176,6 +176,34 @@
                 transform: translateY(0);
             }
         }
+
+        /* Add cursor animation */
+        @keyframes blink {
+            from, to { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .cursor {
+            display: inline-block;
+            animation: blink 1s step-end infinite;
+            color: #4ade80; /* Set cursor color */
+            width: 8px; /* Wider cursor */
+            height: 1.2em; /* Match the height of the text */
+            background-color: #4ade80; /* Solid block cursor */
+            vertical-align: middle; /* Align cursor with the bottom of the text */
+            margin-left: 2px; /* Small spacing from text */
+            margin-bottom: 2px; /* Small spacing from text */
+        }
+
+        /* Prevent text selection and cursor interaction */
+        .terminal {
+            user-select: none; /* Disable text selection */
+            cursor: default; /* Set default cursor */
+        }
+
+        .terminal-text {
+            pointer-events: none; /* Disable pointer events */
+        }
     </style>
 </head>
 <body>
@@ -191,7 +219,7 @@
                 <div class="terminal-text">
                     <span class="prompt">➜</span>
                     <span class="path">~</span>
-                    neofetch
+                    <span id="command"></span><span class="cursor"></span>
                 </div>
             </div>
 
@@ -241,6 +269,44 @@
     <div class="ai-credit">this site was written almost entirely by AI hehe :3</div>
 
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // typing and deleting animation
+            const commandElement = document.getElementById('command');
+            const texts = ['neofetch', 'git push --force'];
+            let currentTextIndex = 0;
+            let isDeleting = false;
+            let i = 0;
+
+            function type() {
+                const currentText = texts[currentTextIndex];
+
+                if (!isDeleting) {
+                    // Typing
+                    commandElement.textContent = currentText.substring(0, i + 1);
+                    i++;
+                    if (i === currentText.length) {
+                        isDeleting = true;
+                        setTimeout(type, 5000); // Wait 5 seconds before deleting
+                    } else {
+                        setTimeout(type, 100); // Typing speed
+                    }
+                } else {
+                    // Deleting
+                    commandElement.textContent = currentText.substring(0, i - 1);
+                    i--;
+                    if (i === 0) {
+                        isDeleting = false;
+                        currentTextIndex = (currentTextIndex + 1) % texts.length; // Switch to next text
+                        setTimeout(type, 500); // Short delay before typing next text
+                    } else {
+                        setTimeout(type, 50); // Deleting speed
+                    }
+                }
+            }
+
+            // Start typing after a short delay
+            setTimeout(type, 500);
+        });
         // bleeding-edge particle system
         document.addEventListener('DOMContentLoaded', () => {
             const particles = [];
