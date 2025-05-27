@@ -70,6 +70,15 @@ body::before {
     gap: 2.5rem;
 }
 
+.code-snippet {
+    /* Code-specific properties */
+    font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', 'Monaco', 'Consolas', monospace;
+    font-size: 0.79rem;
+    overflow-x: auto;
+    white-space: pre;
+    word-wrap: break-word;
+}
+
 .terminal {
     background: rgba(255, 255, 255, 0.02);
     backdrop-filter: blur(30px) saturate(150%);
@@ -270,11 +279,12 @@ h1 {
     color: rgba(255, 255, 255, 0.9);
 }
 
-.about-card:nth-child(1) { border-color: rgba(255, 154, 158, 0.08); }
-.about-card:nth-child(2) { border-color: rgba(168, 181, 255, 0.08); }
-.about-card:nth-child(3) { border-color: rgba(184, 245, 209, 0.08); }
-.about-card:nth-child(4) { border-color: rgba(255, 179, 186, 0.08); }
-.about-card:nth-child(5) { border-color: rgba(250, 208, 196, 0.08); }
+
+.about-card:nth-child(1) { border-color: rgba(206, 206, 206, 0.75); }
+.about-card:nth-child(2) { border-color: rgba(121, 182, 224, 0.75); }
+.about-card:nth-child(3) { border-color: rgba(222, 115, 86, 0.75); }
+.about-card:nth-child(4) { border-color: rgba(211, 69, 22, 0.75); }
+
 
 .tech-columns {
     display: flex;
