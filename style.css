@@ -279,12 +279,35 @@ h1 {
     color: rgba(255, 255, 255, 0.9);
 }
 
-
-.about-card:nth-child(1) { border-color: rgba(206, 206, 206, 0.75); }
-.about-card:nth-child(2) { border-color: rgba(121, 182, 224, 0.75); }
+.about-card:nth-child(1) { border-color: rgba(178, 178, 178, 0.75); }
+.about-card:nth-child(2) { border-color: rgba(119, 153, 232, 0.75); }
 .about-card:nth-child(3) { border-color: rgba(222, 115, 86, 0.75); }
-.about-card:nth-child(4) { border-color: rgba(211, 69, 22, 0.75); }
+.about-card:nth-child(4) { border-color: rgba(183, 70, 33, 0.75); }
+.about-card:nth-child(5) { border-color: rgba(121, 182, 224, 0.75); }
+.about-card:nth-child(6) { border-color: rgba(236, 71, 76, 0.75); }
 
+.game-card {
+    padding: 0.625rem 1rem;
+    background: rgba(255, 255, 255, 0.015);
+    backdrop-filter: blur(8px);
+    border-radius: 1rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: all 0.2s ease;
+    box-shadow: none;
+}
+
+.game-card:hover {
+    background: rgba(255, 255, 255, 0.025);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.game-card:nth-child(1) { border-color: rgba(163, 210, 148, 0.75); }
+.game-card:nth-child(2) { border-color: rgba(220, 135, 236, 0.75); }
+.game-card:nth-child(3) { border-color: rgba(178, 51, 51, 0.8); }
+.game-card:nth-child(4) { border-color: rgba(86, 126, 199, 0.75); }
 
 .tech-columns {
     display: flex;
