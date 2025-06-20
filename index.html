@@ -25,20 +25,38 @@
 
         <!-- Main content -->
         <div class="main-content">
-            <h1>uwuclxdy :3</h1>
+            <h1>hi, im uwuclxdy!</h1>
 
-            <!-- About me section -->
-            <div class="about-section">
-                <h2 class="section-title underlined">i am:</h2>
-                <div class="about-cards">
-                    <div class="about-card">a caffeine addict u.u</div>
-                    <div class="about-card">"always a user error" typeshit</div>
-                    <div class="about-card">a pro vibe coder</div>
-                    <div class="about-card">
-                        <div class="code-snippet">#[allow(sleep_depravation)]</div>
+            <!-- Toggle section titles -->
+            <div class="section-toggles">
+                <h2 class="section-title underlined toggle-title active" id="aboutToggle">about me</h2>
+                <h2 class="section-title toggle-title" id="gamesToggle">games i play</h2>
+            </div>
+
+            <!-- Cards container -->
+            <div class="cards-container">
+                <!-- About me cards -->
+                <div class="card-set visible" id="aboutCards">
+                    <div class="about-cards">
+                        <div class="about-card">caffeine addict u.u</div>
+                        <div class="about-card">"always a user error" typeshit</div>
+                        <div class="about-card">pro vibe coder</div>
+                        <div class="about-card">
+                            <div class="code-snippet">#[allow(sleep_depravation)]</div>
+                        </div>
+                        <div class="about-card">empl*yed</div>
+                        <div class="about-card">cringe :3</div>
                     </div>
-                    <div class="about-card">empl*yed</div>
-                    <div class="about-card">a cringe amd fanboy xd</div>
+                </div>
+
+                <!-- Games cards -->
+                <div class="card-set hidden" id="gameCards">
+                    <div class="about-cards">
+                        <div class="game-card">minecraft</div>
+                        <div class="game-card">osu!</div>
+                        <div class="game-card">rhythia</div>
+                        <div class="game-card">league of legends</div>
+                    </div>
                 </div>
             </div>
 
@@ -59,26 +77,15 @@
                     <h2 class="section-title">some unrelated peak:</h2>
                     <div class="tech-stack">
                         <div class="tech-group">
+                            <span class="tech-badge blue">Linus Torvalds (goat)</span>
                             <span class="tech-badge blue">JetBrains IDEs</span>
                             <span class="tech-badge blue">Arch Linux</span>
-                            <span class="tech-badge blue">FOSS</span>
-                            <span class="tech-badge blue">AMD</span>
                             <span class="tech-badge blue">Git</span>
+                            <span class="tech-badge blue">AMD</span>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- games section -->
-            <!-- todo: make this a section that appears when clicking on a title next to "i am" and hide the previous cards -->
-<!--            <div class="about-section">-->
-<!--                <h2 class="section-title underlined">games i play:</h2>-->
-<!--                <div class="about-cards">-->
-<!--                    <div class="game-card">minecraft</div>-->
-<!--                    <div class="game-card">osu!</div>-->
-<!--                    <div class="game-card">rhythia</div>-->
-<!--                </div>-->
-<!--            </div>-->
 
             <div class="divider"></div>
 
@@ -101,8 +108,136 @@
     </div>
 </div>
 <div class="ai-credit">made with Claude hehe :3</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Your original typing and deleting animation
+        const commandElement = document.getElementById('command');
+        const texts = ['fastfetch', 'sudo chmod -R a+rwx /', 'yay -Yc', 'git push --force', 'docker volume prune -f'];
+        let currentTextIndex = 0;
+        let isDeleting = false;
+        let i = 0;
+
+        function type() {
+            const currentText = texts[currentTextIndex];
+
+            if (!isDeleting) {
+                // Typing
+                commandElement.textContent = currentText.substring(0, i + 1);
+                i++;
+                if (i === currentText.length) {
+                    isDeleting = true;
+                    setTimeout(type, 5000); // Wait 5 seconds before deleting
+                } else {
+                    setTimeout(type, 100); // Typing speed
+                }
+            } else {
+                // Deleting
+                commandElement.textContent = currentText.substring(0, i - 1);
+                i--;
+                if (i === 0) {
+                    isDeleting = false;
+                    currentTextIndex = (currentTextIndex + 1) % texts.length; // Switch to next text
+                    setTimeout(type, 500); // Short delay before typing next text
+                } else {
+                    setTimeout(type, 50); // Deleting speed
+                }
+            }
+        }
+
+        // Your original bleeding-edge particle system
+        const particles = [];
+        const numParticles = 30;
+        const particleSpeedRange = 0.25;
+
+        function createParticle(x, y) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = `${x}px`;
+            particle.style.top = `${y}px`;
+            particle.style.opacity = '1';
+
+            const vx = (Math.random() * 2 - 1) * particleSpeedRange;
+            const vy = (Math.random() * 2 - 1) * particleSpeedRange;
+            const data = { element: particle, x, y, vx, vy, opacity: 1 };
+
+            document.body.appendChild(particle);
+            particles.push(data);
+        }
+
+        function spawnParticles() {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            for (let i = 0; i < numParticles; i++) {
+                createParticle(
+                    Math.random() * width,
+                    Math.random() * height
+                );
+            }
+        }
+
+        function updateParticles() {
+            for (let i = particles.length - 1; i >= 0; i--) {
+                const p = particles[i];
+                p.x += p.vx;
+                p.y += p.vy;
+
+                if (p.x < 0) p.x = window.innerWidth;
+                if (p.x > window.innerWidth) p.x = 0;
+                if (p.y < 0) p.y = window.innerHeight;
+                if (p.y > window.innerHeight) p.y = 0;
+
+                p.element.style.left = `${p.x}px`;
+                p.element.style.top = `${p.y}px`;
+                p.element.style.opacity = p.opacity < 0.2 ? p.opacity * 2 : p.opacity;
+            }
+
+            while (particles.length < numParticles) {
+                createParticle(
+                    Math.random() * window.innerWidth,
+                    Math.random() * window.innerHeight
+                );
+            }
+
+            requestAnimationFrame(updateParticles);
+        }
+
+        // Toggle functionality (minimal addition)
+        function toggleSection(showGames) {
+            const aboutToggle = document.getElementById('aboutToggle');
+            const gamesToggle = document.getElementById('gamesToggle');
+            const aboutCards = document.getElementById('aboutCards');
+            const gameCards = document.getElementById('gameCards');
+
+            if (showGames) {
+                // Show games section
+                aboutToggle.classList.remove('active', 'underlined');
+                gamesToggle.classList.add('active', 'underlined');
+                aboutCards.classList.remove('visible');
+                aboutCards.classList.add('hidden');
+                gameCards.classList.remove('hidden');
+                gameCards.classList.add('visible');
+            } else {
+                // Show about section
+                gamesToggle.classList.remove('active', 'underlined');
+                aboutToggle.classList.add('active', 'underlined');
+                gameCards.classList.remove('visible');
+                gameCards.classList.add('hidden');
+                aboutCards.classList.remove('hidden');
+                aboutCards.classList.add('visible');
+            }
+        }
+
+        // Add click event listeners for toggles
+        document.getElementById('aboutToggle').addEventListener('click', () => toggleSection(false));
+        document.getElementById('gamesToggle').addEventListener('click', () => toggleSection(true));
+
+        // Start your original animations
+        spawnParticles();
+        updateParticles();
+        setTimeout(type, 2500); // Start typing after a short delay
+    });
+</script>
+
 </body>
-
-<script src="script.js"></script>
-
 </html>
