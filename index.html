@@ -1,3 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- Top Section -->
+        <nav class="top-section">
+            <button class="nav-button">osu!</button>
+            <button class="nav-button">rhythia</button>
+        </nav>
+
+        <!-- Main Content Section -->
+        <main class="main-content">
+            <!-- Card Group Container -->
+            <div class="card-group">
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <span class="card-label">tiktok</span>
+                            <span class="handle-tag">@uwuclxdy</span>
+                        </div>
+                        <div class="profile-icon">
+                            <img src="pfp.jpg" alt="profile picture for tiktok">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">i post random shit and you may as well find out all there is about me from scraping my comments (the digital pawprint is crazy xd)</p>
+                        <a href="https://www.tiktok.com/@uwuclxdy" class="card-cta" target="_blank" rel="noopener noreferrer">take me there -></a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <span class="card-label">github</span>
+                            <span class="handle-tag">uwuclxdy</span>
+                        </div>
+                        <div class="profile-icon">
+                            <img src="pfp.jpg" alt="profile picture for github">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">useless projects here, some more than the other, feel free to bully me for vibecoding majority of them (if you have a project idea or need a tool lmk bro)</p>
+                        <a href="https://github.com/uwuclxdy" class="card-cta" target="_blank" rel="noopener noreferrer">take me there -></a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">
+                            <span class="card-label">discord</span>
+                            <span class="handle-tag">uwuclxdy</span>
+                        </div>
+                        <div class="profile-icon">
+                            <img src="pfp.jpg" alt="profile picture for discord">
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-description">here you've got the most chances of me replying to you</p>
+                        <a href="javascript:void(0)" class="card-cta" onclick="copyToClipboard('uwuclxdy')">copy username</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Bottom Section -->
+        <div class="bottom-section">
+            <button class="about-button">about</button>
+        </div>
+    </div>
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text)
+        }
+    </script>
+</body>
 </html>
