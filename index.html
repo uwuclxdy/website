@@ -156,6 +156,11 @@
                             </h2>
                         </div>
                         <div class="osu-box-content">
+                            <figure class="osu-preview">
+                                <button class="osu-preview-trigger" type="button" data-preview-trigger data-preview-label="uwuclxdy x ayunda risu skin" aria-label="Expand preview for uwuclxdy x ayunda risu skin">
+                                    <img src="img/ayundarisu.png">
+                                </button>
+                            </figure>
                             <p class="osu-description">both of these skins still need changes but are good enough for me atm. heavily remixed ayunda risu, without ui elements (didn't need them, lazer supremacy). still felt like giving credit is appropriate</p>
                         </div>
                         <div class="osu-box-footer">
@@ -176,6 +181,11 @@
                             </h2>
                         </div>
                         <div class="osu-box-content">
+                            <figure class="osu-preview">
+                                <button class="osu-preview-trigger" type="button" data-preview-trigger data-preview-label="uwuclxdy x ayunda risu x whitecat skin" aria-label="Expand preview for uwuclxdy x ayunda risu x whitecat skin">
+                                    <img src="img/whitecat.png">
+                                </button>
+                            </figure>
                             <p class="osu-description">same for this one, just with whitecat's circles</p>
                         </div>
                         <div class="osu-box-footer">
@@ -196,6 +206,9 @@
                             </h2>
                         </div>
                         <div class="osu-box-content">
+                            <figure class="osu-preview osu-preview--placeholder" aria-label="uwuclxdy v1 skin preview coming soon">
+                                <span class="osu-preview-text">soon</span>
+                            </figure>
                             <p class="osu-description">still in the works, currently the other two skins are good enough for the amount i play this fuckass game.. fully custom skin maybe in the future</p>
                         </div>
                         <div class="osu-box-footer">
@@ -232,6 +245,15 @@
             </section>
             </div>
         </main>
+    </div>
+
+    <div class="osu-preview-modal" data-preview-modal aria-hidden="true" tabindex="-1">
+        <div class="osu-preview-modal__backdrop" data-preview-dismiss></div>
+        <figure class="osu-preview-modal__content">
+            <button class="osu-preview-modal__close" type="button" data-preview-dismiss aria-label="Close preview">&times;</button>
+            <img src="" alt="" data-preview-image>
+            <figcaption data-preview-caption></figcaption>
+        </figure>
     </div>
 
     <script src="scripts/main.js"></script>
