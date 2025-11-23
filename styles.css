@@ -63,6 +63,13 @@ body {
     min-height: 100vh;
 }
 
+a,
+a:hover,
+a:focus,
+a:visited {
+    text-decoration: none;
+}
+
 .page-container {
     width: min(1800px, calc(100% - 80px));
     max-width: none;
