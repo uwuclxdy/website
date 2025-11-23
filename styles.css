@@ -38,6 +38,10 @@
     --color-focus: #a9d0ff;
     --color-code: #89b4fa;
 
+    /* Motion */
+    --motion-profile-flip-duration: 0.45s;
+    --motion-profile-flip-ease: cubic-bezier(0.65, 0, 0.35, 1);
+
     /* Additional surface colors */
     --color-surface-0: #313244;
     --color-surface-1: #45475a;
@@ -204,9 +208,11 @@ body {
     position: relative;
     inset: auto;
     width: 100%;
+    flex: 1 0 auto;
     display: none;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 24px;
     opacity: 0;
     pointer-events: none;
@@ -373,11 +379,14 @@ body {
     border: 2px solid var(--color-accent-1);
     border-radius: 10px;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
+    position: relative;
     background-color: var(--color-bg-secondary);
     box-shadow: 0 6px 18px var(--color-overlay);
+    perspective: 480px;
+    isolation: isolate;
+    transform-style: preserve-3d;
 }
 
 .profile-icon img {
@@ -386,6 +395,95 @@ body {
     border-radius: 8px;
     object-fit: cover;
     border: 1px solid var(--color-border-subtle);
+}
+
+.profile-icon .platform-logo {
+    grid-area: 1 / 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-primary);
+    background: var(--color-bg-secondary);
+    backface-visibility: hidden;
+    transform: rotateY(0deg);
+    opacity: 1;
+    transition: transform var(--motion-profile-flip-duration) var(--motion-profile-flip-ease),
+        opacity var(--motion-profile-flip-duration) var(--motion-profile-flip-ease);
+}
+
+.profile-icon .platform-logo svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+}
+
+.profile-icon[data-platform] {
+    border-color: var(--color-border-primary);
+}
+
+.profile-icon[data-platform] .profile-photo {
+    grid-area: 1 / 1;
+    border-radius: 8px;
+    opacity: 0;
+    transform: rotateY(-180deg);
+    transform-origin: center;
+    border-color: transparent;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transition: transform var(--motion-profile-flip-duration) var(--motion-profile-flip-ease),
+        opacity var(--motion-profile-flip-duration) var(--motion-profile-flip-ease);
+}
+
+.profile-icon[data-platform]:hover .platform-logo,
+.profile-icon[data-platform]:focus-within .platform-logo {
+    transform: rotateY(180deg);
+    opacity: 0;
+}
+
+.profile-icon[data-platform]:hover .profile-photo,
+.profile-icon[data-platform]:focus-within .profile-photo {
+    transform: rotateY(0deg);
+    opacity: 1;
+}
+
+.profile-icon[data-platform="tiktok"] .platform-logo {
+    background: #ffffff;
+    color: #ffffff;
+}
+
+.profile-icon[data-platform="github"] .platform-logo {
+    background: #0d1117;
+    color: #f0f6fc;
+}
+
+.profile-icon[data-platform="discord"] .platform-logo {
+    background: #5865f2;
+    color: #ffffff;
+}
+
+/* Keyframes removed in favor of transform transitions for smoother reversal */
+
+@media (prefers-reduced-motion: reduce) {
+    .profile-icon[data-platform] .platform-logo,
+    .profile-icon[data-platform] .profile-photo {
+        transition: none;
+    }
+
+    .profile-icon[data-platform]:hover .platform-logo,
+    .profile-icon[data-platform]:focus-within .platform-logo {
+        opacity: 0;
+        transform: none;
+    }
+
+    .profile-icon[data-platform]:hover .profile-photo,
+    .profile-icon[data-platform]:focus-within .profile-photo {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 .card-body {
@@ -440,6 +538,7 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: auto;
 }
 
 .about-button {
