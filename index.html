@@ -3,83 +3,469 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Page</title>
+    <title>uwuclxdy</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="page-container">
-        <!-- Top Section -->
-        <nav class="top-section">
-            <button class="nav-button">osu!</button>
-            <button class="nav-button">rhythia</button>
-        </nav>
-
-        <!-- Main Content Section -->
-        <main class="main-content">
-            <!-- Card Group Container -->
-            <div class="card-group">
-                <!-- Card 1 -->
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">
-                            <span class="card-label">tiktok</span>
-                            <span class="handle-tag">@uwuclxdy</span>
-                        </div>
-                        <div class="profile-icon">
-                            <img src="pfp.jpg" alt="profile picture for tiktok">
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-description">i post random shit and you may as well find out all there is about me from scraping my comments (the digital pawprint is crazy xd)</p>
-                        <a href="https://www.tiktok.com/@uwuclxdy" class="card-cta" target="_blank" rel="noopener noreferrer">take me there -></a>
-                    </div>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">
-                            <span class="card-label">github</span>
-                            <span class="handle-tag">uwuclxdy</span>
-                        </div>
-                        <div class="profile-icon">
-                            <img src="pfp.jpg" alt="profile picture for github">
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-description">useless projects here, some more than the other, feel free to bully me for vibecoding majority of them (if you have a project idea or need a tool lmk bro)</p>
-                        <a href="https://github.com/uwuclxdy" class="card-cta" target="_blank" rel="noopener noreferrer">take me there -></a>
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="card">
-                    <div class="card-header">
-                        <div class="card-title">
-                            <span class="card-label">discord</span>
-                            <span class="handle-tag">uwuclxdy</span>
-                        </div>
-                        <div class="profile-icon">
-                            <img src="pfp.jpg" alt="profile picture for discord">
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-description">here you've got the most chances of me replying to you</p>
-                        <a href="javascript:void(0)" class="card-cta" onclick="copyToClipboard('uwuclxdy')">copy username</a>
-                    </div>
+        <nav class="top-section" aria-label="Primary navigation">
+            <div class="nav-primary" role="tablist">
+                <button class="nav-tab is-active" type="button" data-primary-tab="home" role="tab" aria-selected="true">home</button>
+                <button class="nav-tab" type="button" data-primary-tab="osu" role="tab" aria-selected="false">osu!</button>
+                <button class="nav-tab" type="button" data-primary-tab="rhythia" role="tab" aria-selected="false">rhythia</button>
+                <div class="nav-children" data-nav-children aria-hidden="true" role="tablist">
+                    <button class="nav-subtab" type="button" data-subtab data-parent="osu" data-target-section="osu-overview" role="tab" aria-selected="false">overview</button>
+                    <button class="nav-subtab" type="button" data-subtab data-parent="osu" data-target-section="osu-skins" role="tab" aria-selected="false">skins</button>
+                    <button class="nav-subtab" type="button" data-subtab data-parent="osu" data-target-section="osu-tools" role="tab" aria-selected="false">tools</button>
                 </div>
             </div>
-        </main>
+        </nav>
+        <div class="nav-divider" aria-hidden="true"></div>
 
-        <!-- Bottom Section -->
-        <div class="bottom-section">
-            <button class="about-button">about</button>
-        </div>
+        <main class="main-content">
+            <div class="content-viewport" data-content-viewport>
+                <section class="content-section is-active" data-section="home" aria-label="Home">
+                <div class="card-group">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <span class="card-label">tiktok</span>
+                                <span class="handle-tag">@uwuclxdy</span>
+                            </div>
+                            <div class="profile-icon">
+                                <img src="pfp.jpg" alt="profile picture for tiktok">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">i post random shit and you may as well find out all there is about me from scraping my comments (the digital pawprint is crazy xd)</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://www.tiktok.com/@uwuclxdy" class="card-cta" target="_blank" rel="noopener noreferrer">
+                                <span>take me there</span>
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <span class="card-label">github</span>
+                                <span class="handle-tag">uwuclxdy</span>
+                            </div>
+                            <div class="profile-icon">
+                                <img src="pfp.jpg" alt="profile picture for github">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">useless projects here, some more than the other, feel free to bully me for vibecoding majority of them (if you have a project idea or need a tool lmk bro)</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="https://github.com/uwuclxdy" class="card-cta" target="_blank" rel="noopener noreferrer">
+                                <span>take me there</span>
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <span class="card-label">discord</span>
+                                <span class="handle-tag">uwuclxdy</span>
+                            </div>
+                            <div class="profile-icon">
+                                <img src="pfp.jpg" alt="profile picture for discord">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">here you've got the most chances of me replying to you</p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="#discord" class="card-cta" data-copy-text="uwuclxdy">
+                                <span>copy username</span>
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-section">
+                    <button class="about-button" type="button">about</button>
+                </div>
+            </section>
+
+                <section class="content-section" data-section="osu-overview" aria-label="osu overview">
+                <div class="card-group osu-card-group">
+                    <div class="osu-box">
+                        <div class="osu-box-header">
+                            <h2 class="osu-box-title">tools</h2>
+                        </div>
+                        <div class="osu-box-content">
+                            <p class="osu-description">an osu!collector downloader and... that's it 💀<br>maybe an all-in-one skin editor, depending on how much you will be able to do with the upcoming skinning update in lazer 🤔</p>
+                        </div>
+                        <div class="osu-box-footer">
+                            <div class="osu-button-container">
+                                <button class="osu-button" type="button" data-link-section="osu-tools">
+                                    <span class="osu-button-label">view tool(s)</span>
+                                    <span class="osu-button-icon">→</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="osu-box">
+                        <div class="osu-box-header">
+                            <h2 class="osu-box-title">skins</h2>
+                        </div>
+                        <div class="osu-box-content">
+                            <p class="osu-description">download my remixed skins here!</p>
+                        </div>
+                        <div class="osu-box-footer">
+                            <div class="osu-button-container">
+                                <button class="osu-button" type="button" data-link-section="osu-skins">
+                                    <span class="osu-button-label">view skins</span>
+                                    <span class="osu-button-icon">→</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-section">
+                    <button class="about-button" type="button" data-link-section="home">back home</button>
+                </div>
+            </section>
+
+                <section class="content-section" data-section="osu-skins" aria-label="osu skins">
+                <div class="card-group osu-card-group">
+                    <div class="osu-box">
+                        <div class="osu-box-header">
+                            <h2 class="osu-box-title">
+                                uwuclxdy x ayunda risu
+                                <span class="osu-skin-tag">v0.1</span>
+                            </h2>
+                        </div>
+                        <div class="osu-box-content">
+                            <p class="osu-description">both of these still require changes but are good enough for me atm. heavily remixed ayunda risu, with removed ui elements (didn't need them, lazer supremacy). i still feel like giving credit is appropriate</p>
+                        </div>
+                        <div class="osu-box-footer">
+                            <div class="osu-button-container">
+                                <button class="osu-button" type="button">
+                                    <span class="osu-button-label">download</span>
+                                    <span class="osu-button-icon">→</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="osu-box">
+                        <div class="osu-box-header">
+                            <h2 class="osu-box-title">
+                                uwuclxdy x ayunda risu x whitecat
+                                <span class="osu-skin-tag">v0.1</span>
+                            </h2>
+                        </div>
+                        <div class="osu-box-content">
+                            <p class="osu-description">same goes for this one, just with whitecat's circles</p>
+                        </div>
+                        <div class="osu-box-footer">
+                            <div class="osu-button-container">
+                                <button class="osu-button" type="button">
+                                    <span class="osu-button-label">download</span>
+                                    <span class="osu-button-icon">→</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="osu-box">
+                        <div class="osu-box-header">
+                            <h2 class="osu-box-title">
+                                uwuclxdy v1
+                                <span class="osu-skin-tag">/</span>
+                            </h2>
+                        </div>
+                        <div class="osu-box-content">
+                            <p class="osu-description">still in the works, currently the other two skins are good enough for the amount i play this fuckass game, so i don't feel like making another one</p>
+                        </div>
+                        <div class="osu-box-footer">
+                            <div class="osu-button-container">
+                                <button class="osu-button" type="button">
+                                    <span class="osu-button-label">download</span>
+                                    <span class="osu-button-icon">→</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-section">
+                    <button class="about-button" type="button" data-link-section="osu-overview">back</button>
+                </div>
+            </section>
+
+                <section class="content-section" data-section="osu-tools" aria-label="osu tools">
+                <div class="card-group osu-card-group">
+                    <div class="osu-box">
+                        <div class="osu-box-header">
+                            <h2 class="osu-box-title">osu!collector downloader</h2>
+                        </div>
+                        <div class="osu-box-content">
+                            <p class="osu-description">download beatmap collections from osu!collector easily</p>
+                        </div>
+                        <div class="osu-box-footer">
+                            <div class="osu-button-container">
+                                <button class="osu-button" type="button">
+                                    <span class="osu-button-label">download</span>
+                                    <span class="osu-button-icon">→</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-section">
+                    <button class="about-button" type="button" data-link-section="osu-overview">back</button>
+                </div>
+            </section>
+
+                <section class="content-section" data-section="rhythia" aria-label="rhythia">
+                <div class="card-group">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="card-title">
+                                <span class="card-label">rhythia</span>
+                                <span class="handle-tag">soon</span>
+                            </div>
+                            <div class="profile-icon">
+                                <img src="pfp.jpg" alt="placeholder avatar for rhythia">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-description">this space is a work-in-progress. check back later for more rhythm goodies.</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="card-cta" type="button" data-link-section="home">
+                                <span>back home</span>
+                                <span>→</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                </section>
+            </div>
+        </main>
     </div>
+
     <script>
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text)
-        }
+        document.addEventListener('DOMContentLoaded', () => {
+            const viewport = document.querySelector('[data-content-viewport]');
+            const sections = Array.from(document.querySelectorAll('[data-section]'));
+            const primaryTabs = Array.from(document.querySelectorAll('[data-primary-tab]'));
+            const secondaryContainer = document.querySelector('[data-nav-children]');
+            const secondaryTabs = secondaryContainer ? Array.from(secondaryContainer.querySelectorAll('[data-subtab]')) : [];
+            const linkControls = Array.from(document.querySelectorAll('[data-link-section]'));
+            const copyTriggers = Array.from(document.querySelectorAll('[data-copy-text]'));
+
+            const sectionMeta = {
+                home: { primary: 'home', level: 0, order: 0 },
+                rhythia: { primary: 'rhythia', level: 0, order: 2 },
+                'osu-overview': { primary: 'osu', level: 1, order: 0 },
+                'osu-skins': { primary: 'osu', level: 2, order: 0, parent: 'osu-overview' },
+                'osu-tools': { primary: 'osu', level: 2, order: 1, parent: 'osu-overview' }
+            };
+
+            const primaryOrder = { home: 0, osu: 1, rhythia: 2 };
+
+            let currentSectionId = 'home';
+            let isTransitioning = false;
+
+            const getSection = (id) => sections.find(section => section.dataset.section === id);
+            const releaseViewportHeight = () => {
+                if (!viewport) return;
+                viewport.style.height = '';
+            };
+
+            const determineDirection = (fromId, toId) => {
+                if (fromId === toId) return 'forward';
+                const fromMeta = sectionMeta[fromId] || sectionMeta.home;
+                const toMeta = sectionMeta[toId] || sectionMeta.home;
+
+                if (toMeta.parent === fromId) return 'forward';
+                if (fromMeta.parent === toId) return 'backward';
+
+                if (toMeta.level !== fromMeta.level) {
+                    return toMeta.level > fromMeta.level ? 'forward' : 'backward';
+                }
+
+                if (toMeta.primary !== fromMeta.primary) {
+                    const fromOrder = primaryOrder[fromMeta.primary] ?? 0;
+                    const toOrder = primaryOrder[toMeta.primary] ?? fromOrder;
+                    return toOrder >= fromOrder ? 'forward' : 'backward';
+                }
+
+                return (toMeta.order ?? 0) >= (fromMeta.order ?? 0) ? 'forward' : 'backward';
+            };
+
+            const updatePrimaryTabs = (activePrimary) => {
+                primaryTabs.forEach(tab => {
+                    const isActive = tab.dataset.primaryTab === activePrimary;
+                    tab.classList.toggle('is-active', isActive);
+                    tab.setAttribute('aria-selected', isActive);
+                });
+            };
+
+            const updateSecondaryTabs = (primaryKey, activeSectionId) => {
+                if (!secondaryContainer) return;
+                const relevantTabs = secondaryTabs.filter(tab => tab.dataset.parent === primaryKey);
+                const hasChildren = relevantTabs.length > 0;
+
+                secondaryContainer.classList.toggle('is-visible', hasChildren);
+                secondaryContainer.setAttribute('aria-hidden', hasChildren ? 'false' : 'true');
+
+                secondaryTabs.forEach(tab => {
+                    const shouldShow = tab.dataset.parent === primaryKey;
+                    const target = tab.dataset.targetSection;
+                    const isActive = shouldShow && target === activeSectionId;
+                    tab.style.display = shouldShow ? 'inline-flex' : 'none';
+                    tab.classList.toggle('is-active', isActive);
+                    tab.setAttribute('aria-selected', isActive);
+                    tab.setAttribute('aria-hidden', shouldShow ? 'false' : 'true');
+                });
+            };
+
+            const finalizeState = (nextId) => {
+                const meta = sectionMeta[nextId] || sectionMeta.home;
+                currentSectionId = nextId;
+                updatePrimaryTabs(meta.primary);
+                updateSecondaryTabs(meta.primary, nextId);
+            };
+
+            const changeSectionInstant = (targetId) => {
+                const nextSection = getSection(targetId);
+                if (!nextSection) return;
+                sections.forEach(section => {
+                    const isActive = section === nextSection;
+                    section.classList.toggle('is-active', isActive);
+                    section.classList.remove('is-entering', 'is-exiting', 'slide-in-from-right', 'slide-in-from-left', 'slide-out-to-right', 'slide-out-to-left');
+                    section.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+                });
+                finalizeState(targetId);
+                isTransitioning = false;
+                releaseViewportHeight();
+            };
+
+            const activateSection = (targetId, { skipAnimation = false } = {}) => {
+                const nextSection = getSection(targetId);
+                const currentSection = getSection(currentSectionId);
+
+                if (!nextSection) return;
+
+                if (skipAnimation) {
+                    changeSectionInstant(targetId);
+                    return;
+                }
+
+                if (isTransitioning) {
+                    return;
+                }
+
+                if (!currentSection || targetId === currentSectionId) {
+                    changeSectionInstant(targetId);
+                    return;
+                }
+
+                isTransitioning = true;
+                const currentHeight = currentSection ? currentSection.offsetHeight : viewport ? viewport.offsetHeight : 0;
+                if (viewport && currentHeight) {
+                    viewport.style.height = `${currentHeight}px`;
+                }
+                const direction = determineDirection(currentSectionId, targetId);
+                const enterClass = direction === 'backward' ? 'slide-in-from-left' : 'slide-in-from-right';
+                const exitClass = direction === 'backward' ? 'slide-out-to-right' : 'slide-out-to-left';
+
+                nextSection.classList.add('is-active', 'is-entering', enterClass);
+                nextSection.setAttribute('aria-hidden', 'false');
+                currentSection.classList.add('is-exiting', exitClass);
+                if (viewport) {
+                    window.requestAnimationFrame(() => {
+                        viewport.style.height = `${nextSection.scrollHeight}px`;
+                    });
+                }
+
+                let enterDone = false;
+                let exitDone = false;
+
+                const checkCompletion = () => {
+                    if (enterDone && exitDone) {
+                        finalizeState(targetId);
+                        isTransitioning = false;
+                        releaseViewportHeight();
+                    }
+                };
+
+                const handleEnterEnd = () => {
+                    nextSection.classList.remove('is-entering', enterClass);
+                    enterDone = true;
+                    checkCompletion();
+                };
+
+                const handleExitEnd = () => {
+                    currentSection.classList.remove('is-exiting', exitClass, 'is-active');
+                    currentSection.setAttribute('aria-hidden', 'true');
+                    exitDone = true;
+                    checkCompletion();
+                };
+
+                nextSection.addEventListener('animationend', handleEnterEnd, { once: true });
+                currentSection.addEventListener('animationend', handleExitEnd, { once: true });
+
+                setTimeout(() => {
+                    if (!enterDone) handleEnterEnd();
+                    if (!exitDone) handleExitEnd();
+                }, 650);
+            };
+
+            primaryTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    if (tab.disabled) return;
+                    const key = tab.dataset.primaryTab;
+                    if (key === 'osu') {
+                        activateSection('osu-overview');
+                        return;
+                    }
+                    activateSection(key);
+                });
+            });
+
+            secondaryTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const target = tab.dataset.targetSection;
+                    if (target) {
+                        activateSection(target);
+                    }
+                });
+            });
+
+            linkControls.forEach(control => {
+                control.addEventListener('click', () => {
+                    activateSection(control.dataset.linkSection);
+                });
+            });
+
+            copyTriggers.forEach(trigger => {
+                trigger.addEventListener('click', event => {
+                    event.preventDefault();
+                    const text = trigger.dataset.copyText;
+                    if (!text) return;
+                    navigator.clipboard.writeText(text).catch(() => {});
+                });
+            });
+
+            sections.forEach(section => {
+                const isActive = section.dataset.section === currentSectionId;
+                section.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+            });
+
+            changeSectionInstant('home');
+        });
     </script>
 </body>
 </html>
