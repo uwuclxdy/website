@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const secondaryTabs = secondaryContainer ? Array.from(secondaryContainer.querySelectorAll('[data-subtab]')) : [];
     const linkControls = Array.from(document.querySelectorAll('[data-link-section]'));
     const copyTriggers = Array.from(document.querySelectorAll('[data-copy-text]'));
+    const previewModal = document.querySelector('[data-preview-modal]');
+    const previewImage = previewModal ? previewModal.querySelector('[data-preview-image]') : null;
+    const previewCaption = previewModal ? previewModal.querySelector('[data-preview-caption]') : null;
+    const previewDismissEls = previewModal ? Array.from(previewModal.querySelectorAll('[data-preview-dismiss]')) : [];
+    const previewTriggers = Array.from(document.querySelectorAll('[data-preview-trigger]'));
 
     const sectionMeta = {
         home: { primary: 'home', level: 0, order: 0 },
@@ -53,6 +58,48 @@ document.addEventListener('DOMContentLoaded', () => {
     const releaseViewportHeight = () => {
         if (!viewport) return;
         viewport.style.height = '';
+    };
+
+    const toggleBodyScrollLock = (shouldLock) => {
+        document.body.classList.toggle('is-modal-open', shouldLock);
+    };
+
+    let activePreviewTrigger = null;
+    let previewIsOpen = false;
+
+    const closePreviewModal = () => {
+        if (!previewModal || !previewImage || !previewIsOpen) return;
+        previewModal.classList.remove('is-visible');
+        previewModal.setAttribute('aria-hidden', 'true');
+        previewImage.src = '';
+        previewImage.alt = '';
+        if (previewCaption) {
+            previewCaption.textContent = '';
+            previewCaption.style.display = 'none';
+        }
+        const triggerToFocus = activePreviewTrigger;
+        activePreviewTrigger = null;
+        previewIsOpen = false;
+        toggleBodyScrollLock(false);
+        if (triggerToFocus) {
+            triggerToFocus.focus();
+        }
+    };
+
+    const openPreviewModal = ({ src, alt, label }) => {
+        if (!previewModal || !previewImage) return;
+        previewImage.src = src;
+        previewImage.alt = alt || label || '';
+        if (previewCaption) {
+            const captionText = label || alt || '';
+            previewCaption.textContent = captionText;
+            previewCaption.style.display = captionText ? '' : 'none';
+        }
+        previewModal.classList.add('is-visible');
+        previewModal.setAttribute('aria-hidden', 'false');
+        previewModal.focus();
+        previewIsOpen = true;
+        toggleBodyScrollLock(true);
     };
 
     const determineDirection = (fromId, toId) => {
@@ -231,6 +278,31 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!text) return;
             navigator.clipboard.writeText(text).catch(() => {});
         });
+    });
+
+    previewTriggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            const img = trigger.querySelector('img');
+            if (!img) return;
+            activePreviewTrigger = trigger;
+            openPreviewModal({
+                src: img.currentSrc || img.src,
+                alt: img.alt,
+                label: trigger.dataset.previewLabel || img.alt
+            });
+        });
+    });
+
+    previewDismissEls.forEach(el => {
+        el.addEventListener('click', () => {
+            closePreviewModal();
+        });
+    });
+
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+            closePreviewModal();
+        }
     });
 
 
