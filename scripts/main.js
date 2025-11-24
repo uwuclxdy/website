@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const sectionMeta = {
         home: { primary: 'home', level: 0, order: 0 },
         'osu-overview': { primary: 'osu', level: 1, order: 0 },
-        'osu-skins': { primary: 'osu', level: 2, order: 0, parent: 'osu-overview' },
-        'osu-tools': { primary: 'osu', level: 2, order: 1, parent: 'osu-overview' }
+        'osu-skins': { primary: 'osu', level: 2, order: 1, parent: 'osu-overview' },
+        'osu-tools': { primary: 'osu', level: 2, order: 0, parent: 'osu-overview' }
     };
 
     const primaryOrder = { home: 0, osu: 1 };
