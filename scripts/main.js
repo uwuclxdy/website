@@ -14,25 +14,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const sectionMeta = {
         home: { primary: 'home', level: 0, order: 0 },
-        'osu-overview': { primary: 'osu', level: 1, order: 0 },
+        'osu-overview': { primary: 'osu', level: 1, order: 1 },
         'osu-skins': { primary: 'osu', level: 2, order: 1, parent: 'osu-overview' },
-        'osu-tools': { primary: 'osu', level: 2, order: 0, parent: 'osu-overview' }
+        'osu-tools': { primary: 'osu', level: 2, order: 0, parent: 'osu-overview' },
+        request: { primary: 'request', level: 0, order: 2 }
     };
 
-    const primaryOrder = { home: 0, osu: 1 };
+    const primaryOrder = { home: 0, osu: 1, request: 2 };
 
     const sectionRoutes = {
         home: '/',
         'osu-overview': '/osu',
         'osu-skins': '/osu/skins',
-        'osu-tools': '/osu/tools'
+        'osu-tools': '/osu/tools',
+        request: '/request'
     };
 
     const pathSectionMap = {
         '/': 'home',
         '/osu': 'osu-overview',
         '/osu/skins': 'osu-skins',
-        '/osu/tools': 'osu-tools'
+        '/osu/tools': 'osu-tools',
+        '/request': 'request'
     };
 
     const normalizePath = (path = '/') => {
@@ -112,14 +115,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (toMeta.parent === fromId) return 'forward';
         if (fromMeta.parent === toId) return 'backward';
 
-        if (toMeta.level !== fromMeta.level) {
-            return toMeta.level > fromMeta.level ? 'forward' : 'backward';
-        }
-
         if (toMeta.primary !== fromMeta.primary) {
             const fromOrder = primaryOrder[fromMeta.primary] ?? 0;
             const toOrder = primaryOrder[toMeta.primary] ?? fromOrder;
             return toOrder >= fromOrder ? 'forward' : 'backward';
+        }
+
+        if (toMeta.level !== fromMeta.level) {
+            return toMeta.level > fromMeta.level ? 'forward' : 'backward';
         }
 
         return (toMeta.order ?? 0) >= (fromMeta.order ?? 0) ? 'forward' : 'backward';
