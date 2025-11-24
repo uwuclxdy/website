@@ -63,6 +63,12 @@ body {
     min-height: 100vh;
 }
 
+@media (max-width: 768px) {
+    body {
+        padding: 12px;
+    }
+}
+
 a,
 a:hover,
 a:focus,
@@ -79,6 +85,14 @@ a:visited {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .page-container {
+        width: 100%;
+        gap: 20px;
+        min-height: calc(100vh - 24px);
+    }
 }
 
 /* Top Section */
@@ -128,6 +142,14 @@ a:visited {
     position: relative;
     transition: color 0.3s ease;
     letter-spacing: 0.06em;
+}
+
+@media (max-width: 768px) {
+    .nav-tab,
+    .nav-subtab {
+        padding: 12px 8px;
+        font-size: 15px;
+    }
 }
 
 .nav-subtab {
@@ -304,18 +326,21 @@ a:visited {
 
 /* Card Group Container */
 .card-group {
-    display: inline-flex;
+    display: flex;
     gap: 20px;
-    padding: 32px;
-    border: 1px solid var(--color-border-primary);
-    border-radius: 24px;
-    background-color: var(--color-bg-secondary);
-    box-shadow: 0 25px 55px var(--color-overlay);
+    padding: 0 32px;
     width: fit-content;
     max-width: 100%;
     justify-content: center;
     flex-wrap: wrap;
     align-self: center;
+}
+
+@media (max-width: 768px) {
+    .card-group {
+        padding: 0 20px;
+        gap: 16px;
+    }
 }
 
 .content-section[data-section="home"] .card-group {
@@ -330,7 +355,9 @@ a:visited {
 
 /* Individual Cards */
 .card {
-    width: 280px;
+    flex: 1 1 280px;
+    min-width: 280px;
+    max-width: 340px;
     border: 1px solid var(--color-border-subtle);
     border-radius: 18px;
     padding: 0;
@@ -342,12 +369,27 @@ a:visited {
     overflow: hidden;
 }
 
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%;
+        min-width: 0;
+        max-width: 100%;
+        border-radius: 14px;
+    }
+}
+
 .card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     border-bottom: 1px solid var(--color-border-primary);
+}
+
+@media (max-width: 768px) {
+    .card-header {
+        padding: 16px;
+    }
 }
 
 .card-title {
@@ -501,6 +543,12 @@ a:visited {
     padding: 20px;
 }
 
+@media (max-width: 768px) {
+    .card-body {
+        padding: 16px;
+    }
+}
+
 .card-description {
     font-size: 15px;
     line-height: 1.6;
@@ -528,6 +576,13 @@ a:visited {
     justify-content: space-between;
     align-items: center;
     text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .card-cta {
+        padding: 18px 16px;
+        font-size: 12px;
+    }
 }
 
 .card-cta:hover,
@@ -558,10 +613,9 @@ a:visited {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 768px) {
     .nav-primary {
-        flex-direction: column;
-        gap: 12px;
+        gap: 16px;
     }
 
     .nav-children {
@@ -569,34 +623,36 @@ a:visited {
         justify-content: center;
         margin-left: 0;
         padding-left: 0;
-        padding-top: 6px;
+        padding-top: 8px;
         border-left: none;
-        border-top: 1px solid rgba(88, 91, 112, 0.4);
+        border-top: 1px solid rgba(88, 91, 112, 0.5);
+        gap: 12px;
     }
+}
 
-    .card-group {
+@media (max-width: 480px) {
+    .nav-primary {
         flex-direction: column;
-        align-items: center;
+        gap: 8px;
         width: 100%;
     }
 
-    .card {
-        width: 100%;
-        max-width: 320px;
+    .nav-children {
+        padding-top: 12px;
+        margin-top: 4px;
     }
 }
 
 /* osu! Page Specific Styles */
 
 .osu-card-group {
-    padding: 32px;
     justify-content: center;
 }
 
 .osu-box {
-    width: 320px;
-    max-width: 360px;
     flex: 1 1 320px;
+    min-width: 320px;
+    max-width: 360px;
     border: 1px solid var(--color-border-subtle);
     border-radius: 18px;
     padding: 0;
@@ -607,10 +663,25 @@ a:visited {
     overflow: hidden;
 }
 
+@media (max-width: 768px) {
+    .osu-box {
+        flex: 1 1 100%;
+        min-width: 0;
+        max-width: 100%;
+        border-radius: 14px;
+    }
+}
+
 .osu-box-header {
     padding: 20px;
     border-bottom: 1px solid var(--color-border-primary);
     width: 100%;
+}
+
+@media (max-width: 768px) {
+    .osu-box-header {
+        padding: 16px;
+    }
 }
 
 .osu-box-title {
@@ -625,12 +696,24 @@ a:visited {
     gap: 4px;
 }
 
+@media (max-width: 768px) {
+    .osu-box-title {
+        font-size: 16px;
+    }
+}
+
 .osu-box-content {
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 16px;
     flex: 1;
+}
+
+@media (max-width: 768px) {
+    .osu-box-content {
+        padding: 16px;
+    }
 }
 
 .osu-preview {
@@ -699,6 +782,12 @@ a:visited {
     transition: opacity 0.25s ease;
 }
 
+@media (max-width: 768px) {
+    .osu-preview-modal {
+        padding: 16px;
+    }
+}
+
 .osu-preview-modal.is-visible {
     opacity: 1;
     pointer-events: auto;
@@ -742,6 +831,17 @@ a:visited {
     cursor: pointer;
     font-size: 18px;
     line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .osu-preview-modal__close {
+        width: 44px;
+        height: 44px;
+        border-radius: 22px;
+        font-size: 20px;
+        top: 8px;
+        right: 8px;
+    }
 }
 
 .osu-preview-modal__close:focus-visible {
@@ -807,6 +907,13 @@ body.is-modal-open {
     text-transform: uppercase;
 }
 
+@media (max-width: 768px) {
+    .osu-button {
+        padding: 18px 16px;
+        font-size: 12px;
+    }
+}
+
 .osu-button:hover,
 .osu-button:focus-visible {
     background-color: var(--color-surface-0);
@@ -826,20 +933,14 @@ body.is-modal-open {
     font-size: 18px;
 }
 
-@media (max-width: 968px) {
-    .osu-card-group {
-        flex-direction: column;
-        align-items: center;
-        padding: 32px 24px;
+@media (max-width: 480px) {
+    .osu-preview-modal__content {
+        max-width: 100%;
+        border-radius: 12px;
+        padding: 12px;
     }
 
-    .osu-box {
-        width: 100%;
-        max-width: 320px;
-    }
-
-    .nav-primary,
-    .nav-secondary {
-        gap: 12px;
+    [data-preview-caption] {
+        font-size: 13px;
     }
 }
