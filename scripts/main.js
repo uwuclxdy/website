@@ -24,13 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const sectionRoutes = {
         home: '/',
         'osu-overview': '/osu',
-        'osu-skins': '/osu',
-        'osu-tools': '/osu'
+        'osu-skins': '/osu/skins',
+        'osu-tools': '/osu/tools'
     };
 
     const pathSectionMap = {
         '/': 'home',
-        '/osu': 'osu-overview'
+        '/osu': 'osu-overview',
+        '/osu/skins': 'osu-skins',
+        '/osu/tools': 'osu-tools'
     };
 
     const normalizePath = (path = '/') => {
