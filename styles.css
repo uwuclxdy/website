@@ -65,7 +65,7 @@ body {
 
 @media (max-width: 768px) {
     body {
-        padding: 12px;
+        padding: 8px;
     }
 }
 
@@ -91,7 +91,7 @@ a:visited {
     .page-container {
         width: 100%;
         gap: 20px;
-        min-height: calc(100vh - 24px);
+        min-height: calc(100vh - 16px);
     }
 }
 
@@ -338,7 +338,7 @@ a:visited {
 
 @media (max-width: 768px) {
     .card-group {
-        padding: 0 20px;
+        padding: 0 8px;
         gap: 16px;
     }
 }
@@ -403,7 +403,7 @@ a:visited {
 
 @media (max-width: 768px) {
     .card-header {
-        padding: 16px;
+        padding: 14px;
     }
 }
 
@@ -560,7 +560,7 @@ a:visited {
 
 @media (max-width: 768px) {
     .card-body {
-        padding: 16px;
+        padding: 14px;
     }
 }
 
@@ -595,7 +595,7 @@ a:visited {
 
 @media (max-width: 768px) {
     .card-cta {
-        padding: 18px 16px;
+        padding: 18px 14px;
         font-size: 12px;
     }
 }
@@ -645,19 +645,6 @@ a:visited {
     }
 }
 
-@media (max-width: 480px) {
-    .nav-primary {
-        flex-direction: column;
-        gap: 8px;
-        width: 100%;
-    }
-
-    .nav-children {
-        padding-top: 12px;
-        margin-top: 4px;
-    }
-}
-
 /* osu! Page Specific Styles */
 
 .osu-card-group {
@@ -695,7 +682,7 @@ a:visited {
 
 @media (max-width: 768px) {
     .osu-box-header {
-        padding: 16px;
+        padding: 14px;
     }
 }
 
@@ -727,7 +714,7 @@ a:visited {
 
 @media (max-width: 768px) {
     .osu-box-content {
-        padding: 16px;
+        padding: 14px;
     }
 }
 
@@ -799,7 +786,7 @@ a:visited {
 
 @media (max-width: 768px) {
     .osu-preview-modal {
-        padding: 16px;
+        padding: 12px;
     }
 }
 
@@ -924,7 +911,7 @@ body.is-modal-open {
 
 @media (max-width: 768px) {
     .osu-button {
-        padding: 18px 16px;
+        padding: 18px 14px;
         font-size: 12px;
     }
 }
