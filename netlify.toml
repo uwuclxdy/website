@@ -1,6 +1,11 @@
 [[redirects]]
+  from = "/osu/skins"
+  to = "/osu/skins/index.html"
+  status = 200
+
+[[redirects]]
   from = "/osu"
-  to = "/index.html"
+  to = "/osu/skins/index.html"
   status = 200
 
 [[redirects]]

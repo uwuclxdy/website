@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>osu! skins // uwuclxdy</title>
+    <link rel="stylesheet" href="../../style.css">
+    <style>
+        #skins-hero {
+            display: block;
+        }
+
+        #skins-hero h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+        }
+
+        .skin-intro {
+            font-size: 1.1rem;
+            color: var(--ctp-subtext1);
+            max-width: 600px;
+            margin-bottom: var(--spacing-lg);
+            line-height: 1.75;
+        }
+
+        #skins-list {
+            margin-top: var(--spacing-xl);
+            padding: var(--spacing-xl) 0;
+        }
+
+        .skins-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .skin-card {
+            background: var(--ctp-mantle);
+            border: 1px solid var(--ctp-surface0);
+            overflow: hidden;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .skin-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .skin-preview-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: var(--ctp-surface0);
+            overflow: hidden;
+        }
+
+        .skin-preview {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .skin-card:hover .skin-preview {
+            transform: scale(1.05);
+        }
+
+        .skin-version-badge {
+            position: absolute;
+            top: var(--spacing-sm);
+            right: var(--spacing-sm);
+            background: var(--primary);
+            color: var(--ctp-base);
+            padding: 4px 8px;
+            font-size: 0.75rem;
+            font-family: var(--font-mono);
+            font-weight: 600;
+        }
+
+        .skin-info {
+            padding: var(--spacing-md);
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-sm);
+            flex: 1;
+        }
+
+        .skin-info h2 {
+            font-size: 1.25rem;
+            color: var(--primary);
+            margin: 0;
+            font-family: var(--font-mono);
+        }
+
+        .skin-description {
+            color: var(--ctp-subtext1);
+            font-size: 0.95rem;
+            margin: 0;
+            flex: 1;
+        }
+
+        .skin-meta {
+            display: flex;
+            gap: var(--spacing-sm);
+            align-items: center;
+        }
+
+        .skin-status {
+            display: inline-block;
+            background: var(--ctp-green);
+            color: var(--ctp-base);
+            padding: 2px 8px;
+            font-size: 0.75rem;
+            font-family: var(--font-mono);
+            font-weight: 600;
+        }
+
+        .skin-buttons {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-top: auto;
+        }
+
+        .skin-btn {
+            flex: 1;
+            padding: var(--spacing-xs) var(--spacing-sm);
+            text-align: center;
+            text-decoration: none;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+            border: 1px solid;
+        }
+
+        .skin-btn-primary {
+            background: var(--primary);
+            color: var(--ctp-base);
+            border-color: var(--primary);
+        }
+
+        .skin-btn-primary:hover {
+            background: var(--primary-hover);
+            border-color: var(--primary-hover);
+        }
+
+        .skin-btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        .skin-btn-secondary:hover {
+            background: var(--primary-dim);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            color: var(--ctp-subtext0);
+            text-decoration: none;
+            font-family: var(--font-mono);
+            margin-bottom: var(--spacing-lg);
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            #skins-hero h1 {
+                font-size: 2rem;
+            }
+
+            .skins-grid {
+                grid-template-columns: 1fr;
+                gap: var(--spacing-md);
+            }
+
+            .skin-info {
+                padding: var(--spacing-md);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="/">
+                    <span class="logo">cloudy<span class="cursor">_</span></span>
+                </a>
+            </div>
+            <div class="nav-right">
+                <a href="/#projects">repos</a>
+                <a href="/#contact">contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <a href="/" class="back-link">← back to home</a>
+
+        <section id="skins-hero">
+            <h1>osu! skins</h1>
+        </section>
+
+        <section id="skins-list">
+            <div class="skins-grid">
+                <div class="skin-card">
+                    <div class="skin-preview-container">
+                        <img src="../../img/ayundarisu.png" alt="uwuclxdy x ayunda risu skin preview" class="skin-preview">
+                        <span class="skin-version-badge">v0.1</span>
+                    </div>
+                    <div class="skin-info">
+                        <h2>uwuclxdy x ayunda risu</h2>
+                        <p class="skin-description">
+                            yummy
+                        </p>
+                        <div class="skin-buttons">
+                            <a href="https://drive.google.com/file/d/16P3P33RAmciJ3Y0K8Srowso-yi2tKkWY/view?usp=sharing" class="skin-btn skin-btn-primary" target="_blank" rel="noopener noreferrer">download</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skin-card">
+                    <div class="skin-preview-container">
+                        <img src="../../img/whitecat.png" alt="uwuclxdy x whitecat skin preview" class="skin-preview">
+                        <span class="skin-version-badge">v0.1</span>
+                    </div>
+                    <div class="skin-info">
+                        <h2>uwuclxdy x whitecat</h2>
+                        <p class="skin-description">
+                            ts buffs aim so much nghhh~
+                        </p>
+                        <div class="skin-buttons">
+                            <a href="https://drive.google.com/file/d/1lbupmzcr6YmPgttUPFctX9RLPkEl0gPM/view?usp=sharing" class="skin-btn skin-btn-primary" target="_blank" rel="noopener noreferrer">download</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="../../script.js"></script>
+</body>
+</html>
