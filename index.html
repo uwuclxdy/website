@@ -4,294 +4,237 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>uwuclxdy</title>
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="icon" href="/img/icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="img/fav.png">
 </head>
 <body>
-    <div class="page-container">
-        <nav class="top-section" aria-label="Primary navigation">
-            <div class="nav-primary" role="tablist">
-                <button class="nav-tab is-active" type="button" data-primary-tab="home" role="tab" aria-selected="true">home</button>
-                <button class="nav-tab" type="button" data-primary-tab="osu" role="tab" aria-selected="false">osu!</button>
-                <button class="nav-tab" type="button" data-primary-tab="request" role="tab" aria-selected="false">request</button>
-                <div class="nav-children" data-nav-children aria-hidden="true" role="tablist">
-                    <button class="nav-subtab" type="button" data-subtab data-parent="osu" data-target-section="osu-tools" role="tab" aria-selected="false">tools</button>
-                    <button class="nav-subtab" type="button" data-subtab data-parent="osu" data-target-section="osu-skins" role="tab" aria-selected="false">skins</button>
-                </div>
+    <div class="grain"></div>
+
+    <header>
+        <nav>
+            <div class="nav-left">
+                <a href="#hero">
+                    <span class="logo">cloudy<span class="cursor">_</span></span>
+                </a>
+            </div>
+            <div class="nav-right">
+                <a href="#projects">repos</a>
+                <a href="#contact">contact</a>
             </div>
         </nav>
-        <div class="nav-divider" aria-hidden="true"></div>
+    </header>
 
-        <main class="main-content">
-            <div class="content-viewport" data-content-viewport>
-                <section class="content-section is-active" data-section="home" aria-label="Home">
-                <div class="card-group">
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-title">
-                                <span class="card-label">tiktok</span>
-                                <span class="handle-tag">@uwuclxdy</span>
-                            </div>
-                            <div class="profile-icon" data-platform="tiktok">
-                                <div class="platform-logo" aria-hidden="true">
-                                    <svg xmlns="http://www.w3.org/2000/svg" aria-label="TikTok" role="img"
-                                         viewBox="0 0 512 512" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><rect rx="15%" height="512" width="512" fill="#ffffff"></rect><defs><path id="t" d="M219 200a117 117 0 1 0 101 115v-128a150 150 0 0 0 88 28v-63a88 88 0 0 1-88-88h-64v252a54 54 0 1 1-37-51z" style="mix-blend-mode:multiply"></path></defs><use href="#t" fill="#f05" x="18" y="15"></use><use href="#t" fill="#0ee"></use></g></svg>
-                                </div>
-                                <img class="profile-photo" src="/img/pfp.jpg" alt="profile picture for tiktok">
-                            </div>
-                        </div>
-                        <div class="card-divider"></div>
-                        <div class="card-body">
-                            <p class="card-description">random shi, mostly clips, you may as well find out all there is about me from scraping my comments (the digital pawprint is crazy xd)</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="https://www.tiktok.com/@uwuclxdy" class="card-cta" target="_blank" rel="noopener noreferrer">
-                                <span>take me there</span>
-                                <span>→</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-title">
-                                <span class="card-label">github</span>
-                                <span class="handle-tag">uwuclxdy</span>
-                            </div>
-                            <div class="profile-icon" data-platform="github">
-                                <div class="platform-logo" aria-hidden="true">
-                                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <title>GitHub</title>
-                                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
-                                    </svg>
-                                </div>
-                                <img class="profile-photo" src="/img/pfp.jpg" alt="profile picture for github">
-                            </div>
-                        </div>
-                        <div class="card-divider"></div>
-                        <div class="card-body">
-                            <p class="card-description">useless projects, some more than the other, feel free to bully me for vibecoding the majority of them (if you have a project idea or need a tool lmk tho)</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="https://github.com/uwuclxdy" class="card-cta" target="_blank" rel="noopener noreferrer">
-                                <span>take me there</span>
-                                <span>→</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-header">
-                            <div class="card-title">
-                                <span class="card-label">discord</span>
-                                <span class="handle-tag">uwuclxdy</span>
-                            </div>
-                            <div class="profile-icon" data-platform="discord">
-                                <div class="platform-logo" aria-hidden="true">
-                                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <title>Discord</title>
-                                        <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
-                                    </svg>
-                                </div>
-                                <img class="profile-photo" src="/img/pfp.jpg" alt="profile picture for discord">
-                            </div>
-                        </div>
-                        <div class="card-divider"></div>
-                        <div class="card-body">
-                            <p class="card-description">here you've got the most chances of me replying to you</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="" class="card-cta" data-copy-text="uwuclxdy">
-                                <span>copy username</span>
-                                <span>→</span>
-                            </a>
-                        </div>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <div class="pfp-container">
+                    <div class="pfp-placeholder">
+                        <img src="img/pfp.png" alt="pfp" style="width: auto; height: 100%;">
                     </div>
                 </div>
-            </section>
+                <div class="hero-text">
+                    <h1>haii, i'm <span class="highlight">cloudy</span>!</h1>
+                    <p class="subtitle">and <span class="highlight">claude</span> is me~ :3</p>
+                    <p class="bio">
+                        i LOVE <span class="tech">rust</span>, im proficient with <span class="tech">c#</span> ig
+                        and know a bit of <span class="tech">python</span> and <span class="tech">bash</span>
+                    </p>
+                    <p class="bio" style="text-align: center;">🔄 translating 🔄</p>
+                    <p class="bio" style="text-align: center;">im a femboy furry larper who don't know shi 😂✌️
+                    </p>
 
-                <section class="content-section" data-section="osu-overview" aria-label="osu overview">
-                <div class="card-group osu-card-group">
-                    <div class="osu-box">
-                        <div class="osu-box-header">
-                            <h2 class="osu-box-title">tools</h2>
-                        </div>
-                        <div class="osu-box-content">
-                            <p class="osu-description">an osu!collector downloader and... that's it 💀<br>maybe an all-in-one skin editor, depending on how much you will be able to do with the upcoming skinning update in lazer 🤔</p>
-                        </div>
-                        <div class="osu-box-footer">
-                            <div class="osu-button-container">
-                                <button class="osu-button" type="button" data-link-section="osu-tools">
-                                    <span class="osu-button-label">view tool(s)</span>
-                                    <span class="osu-button-icon">→</span>
-                                </button>
+                    <div class="badges">
+                        <a href="/osu/skins">
+                            <div class="badge" title="osu! skins">
+                                <span class="badge-icon">📂</span>
+                                <span class="badge-label">osu! skins</span>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="osu-box">
-                        <div class="osu-box-header">
-                            <h2 class="osu-box-title">skins</h2>
-                        </div>
-                        <div class="osu-box-content">
-                            <p class="osu-description">download my skins here!</p>
-                        </div>
-                        <div class="osu-box-footer">
-                            <div class="osu-button-container">
-                                <button class="osu-button" type="button" data-link-section="osu-skins">
-                                    <span class="osu-button-label">view skins</span>
-                                    <span class="osu-button-icon">→</span>
-                                </button>
+                        </a>
+                        <a href="https://github.com/uwuclxdy">
+                            <div class="badge" title="Total GitHub Stars">
+                                <span class="badge-icon">⭐</span>
+                                <span class="badge-label">fetching...</span>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
-            </section>
-
-                <section class="content-section" data-section="osu-skins" aria-label="osu skins">
-                <div class="card-group osu-card-group">
-                    <div class="osu-box">
-                        <div class="osu-box-header">
-                            <h2 class="osu-box-title">
-                                uwuclxdy x ayunda risu
-                                <span class="osu-skin-tag">v0.1</span>
-                            </h2>
-                        </div>
-                        <div class="osu-box-content">
-                            <figure class="osu-preview">
-                                <button class="osu-preview-trigger" type="button" data-preview-trigger data-preview-label="uwuclxdy x ayunda risu skin" aria-label="Expand preview for uwuclxdy x ayunda risu skin">
-                                    <img src="/img/ayundarisu.png" alt="">
-                                </button>
-                            </figure>
-                            <p class="osu-description">both of these skins still need changes but are good enough for me atm. heavily remixed ayunda risu, without ui elements (didn't need them, lazer supremacy). still felt like giving credit is appropriate</p>
-                        </div>
-                        <div class="osu-box-footer">
-                            <div class="osu-button-container">
-                                <a class="osu-button" href="https://drive.google.com/file/d/16P3P33RAmciJ3Y0K8Srowso-yi2tKkWY/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                                    <span class="osu-button-label">download</span>
-                                    <span class="osu-button-icon">→</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="osu-box">
-                        <div class="osu-box-header">
-                            <h2 class="osu-box-title">
-                                uwuclxdy x ayunda risu x whitecat
-                                <span class="osu-skin-tag">v0.1</span>
-                            </h2>
-                        </div>
-                        <div class="osu-box-content">
-                            <figure class="osu-preview">
-                                <button class="osu-preview-trigger" type="button" data-preview-trigger data-preview-label="uwuclxdy x ayunda risu x whitecat skin" aria-label="Expand preview for uwuclxdy x ayunda risu x whitecat skin">
-                                    <img src="/img/whitecat.png" alt="">
-                                </button>
-                            </figure>
-                            <p class="osu-description">same for this one, just with whitecat's circles</p>
-                        </div>
-                        <div class="osu-box-footer">
-                            <div class="osu-button-container">
-                                <a class="osu-button" href="https://drive.google.com/file/d/1lbupmzcr6YmPgttUPFctX9RLPkEl0gPM/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                                    <span class="osu-button-label">download</span>
-                                    <span class="osu-button-icon">→</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="osu-box">
-                        <div class="osu-box-header">
-                            <h2 class="osu-box-title">
-                                uwuclxdy v1
-                                <span class="osu-skin-tag">/</span>
-                            </h2>
-                        </div>
-                        <div class="osu-box-content">
-                            <figure class="osu-preview osu-preview--placeholder" aria-label="uwuclxdy v1 skin preview coming soon">
-                                <span class="osu-preview-text">soon</span>
-                            </figure>
-                            <p class="osu-description">still in the works, currently the other two skins are good enough for the amount i play this fuckass game.. fully custom skin maybe in the future</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-                <section class="content-section" data-section="osu-tools" aria-label="osu tools">
-                <div class="card-group osu-card-group">
-                    <div class="osu-box">
-                        <div class="osu-box-header">
-                            <h2 class="osu-box-title">osu!collect</h2>
-                        </div>
-                        <div class="osu-box-content">
-                            <figure class="osu-preview">
-                                <button class="osu-preview-trigger" type="button" data-preview-trigger data-preview-label="osu!collect tool" aria-label="Expand preview for osu!collect tool">
-                                    <img src="/img/osucollect.png" alt="">
-                                </button>
-                            </figure>
-                            <p class="osu-description">osu!collector downloader</p>
-                        </div>
-                        <div class="osu-box-footer">
-                            <div class="osu-button-container">
-                                <a class="osu-button" href="https://github.com/uwuclxdy/osu-collect" target="_blank" rel="noopener noreferrer">
-                                    <span class="osu-button-label">github</span>
-                                    <span class="osu-button-icon">→</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="osu-box">
-                        <div class="osu-box-header">
-                            <h2 class="osu-box-title">
-                                skin editor
-                                <span class="osu-skin-tag">/</span>
-                            </h2>
-                        </div>
-                        <div class="osu-box-content">
-                            <figure class="osu-preview osu-preview--placeholder" aria-label="upcoming tool preview coming soon">
-                                <span class="osu-preview-text">soon</span>
-                            </figure>
-                            <p class="osu-description">maybe in the future</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-                <section class="content-section" data-section="request" aria-label="request">
-                <div class="card-group">
-                    <div class="card card--wide">
-                        <div class="card-header">
-                            <div class="card-title">
-                                <span class="card-label">submit ideas</span>
-                            </div>
-                        </div>
-                        <div class="card-divider"></div>
-                        <div class="card-body">
-                            <p class="card-description">if you have any cool ideas for a project or something, don't hesitate to shoot me a dm on discord! I'm lowkey very busy with sch*ol and shi nowadays, but will try to find some time ig...<br>currently working on rhysu! – an osu! lazer ruleset, that implements Rhythia directly into osu xdd</p>
-                        </div>
-                        <div class="card-footer">
-                            <a href="" class="card-cta" data-copy-text="uwuclxdy">
-                                <span>copy username</span>
-                                <span>→</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
             </div>
-        </main>
-    </div>
+        </section>
 
-    <div class="osu-preview-modal" data-preview-modal aria-hidden="true" tabindex="-1">
-        <div class="osu-preview-modal__backdrop" data-preview-dismiss></div>
-        <figure class="osu-preview-modal__content">
-            <button class="osu-preview-modal__close" type="button" data-preview-dismiss aria-label="Close preview">&times;</button>
-            <img src="" alt="" data-preview-image>
-            <figcaption data-preview-caption></figcaption>
-        </figure>
-    </div>
+        <!-- <section id="games">
+            <h2>games i play <span class="subtext">// send help im addicted</span></h2>
+            <div class="games-grid">
+                <div class="game-card" data-game="osu">
+                    <div class="game-icon">
+                        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m75.1 181.4c-4.7 0-8.8-0.8-12.3-2.3s-6.4-3.7-8.6-6.4c-2.3-2.7-4-5.9-5.2-9.6s-1.7-7.6-1.7-11.9 0.6-8.3 1.7-12c1.2-3.7 2.9-7 5.2-9.7s5.2-4.9 8.6-6.5 7.6-2.4 12.3-2.4 8.8 0.8 12.3 2.4 6.4 3.7 8.8 6.5c2.3 2.7 4 6 5.2 9.7 1.1 3.7 1.7 7.7 1.7 12s-0.6 8.2-1.7 11.9-2.8 6.9-5.2 9.6c-2.3 2.7-5.2 4.9-8.8 6.4-3.4 1.6-7.6 2.3-12.3 2.3zm0-12.1c4.2 0 7.2-1.6 9-4.7s2.7-7.6 2.7-13.4-0.9-10.3-2.7-13.4-4.8-4.7-9-4.7c-4.1 0-7.1 1.6-8.9 4.7s-2.7 7.6-2.7 13.4 0.9 10.3 2.7 13.4c1.8 3.2 4.8 4.7 8.9 4.7zm51.8-14.5c-4.2-1.2-7.5-3-9.8-5.3-2.4-2.4-3.5-5.9-3.5-10.6 0-5.7 2-10.1 6.1-13.4 4.1-3.2 9.6-4.8 16.7-4.8 2.9 0 5.8 0.3 8.6 0.8s5.7 1.3 8.6 2.4c-0.2 1.9-0.5 4-1.1 6.1s-1.3 3.9-2.1 5.5c-1.8-0.7-3.8-1.4-5.9-2-2.2-0.6-4.5-0.8-6.8-0.8-2.5 0-4.5 0.4-5.9 1.2s-2.1 2-2.1 3.8c0 1.6 0.5 2.8 1.5 3.5s2.4 1.3 4.3 1.9l6.4 1.9c2.1 0.6 4 1.3 5.7 2.2s3.1 1.9 4.3 3.2 2.1 2.8 2.8 4.7 1 4.2 1 6.8c0 2.8-0.6 5.3-1.7 7.7-1.2 2.4-2.8 4.5-5 6.2-2.2 1.8-4.9 3.1-8 4.2-3.1 1-6.7 1.5-10.7 1.5-1.8 0-3.4-0.1-4.9-0.2s-2.9-0.3-4.3-0.6-2.7-0.6-4.1-1c-1.3-0.4-2.8-0.9-4.4-1.5 0.1-2 0.5-4.1 1.1-6.1 0.6-2.1 1.3-4.1 2.2-6 2.5 1 4.8 1.7 7 2.2s4.5 0.7 6.9 0.7c1 0 2.2-0.1 3.4-0.3s2.4-0.5 3.4-1 1.9-1.1 2.6-1.9 1.1-1.8 1.1-3.1c0-1.8-0.5-3.1-1.6-3.9s-2.6-1.5-4.5-2.1zm39.3-32.7c2.7-0.4 5.3-0.7 8-0.7 2.6 0 5.3 0.2 8 0.7v30.7c0 3.1 0.2 5.6 0.7 7.6s1.2 3.6 2.2 4.7c1 1.2 2.3 2 3.8 2.5s3.3 0.7 5.3 0.7c2.8 0 5.1-0.3 7-0.8v-45.4c2.7-0.4 5.3-0.7 7.9-0.7s5.3 0.2 8 0.7v55.8c-2.4 0.8-5.6 1.6-9.5 2.4s-8 1.2-12.3 1.2c-3.8 0-7.5-0.3-11-0.9s-6.6-1.9-9.3-3.8-4.8-4.8-6.3-8.5c-1.6-3.7-2.4-8.7-2.4-14.9v-31.3zm65.9 58c-0.4-2.8-0.7-5.5-0.7-8.2s0.2-5.5 0.7-8.3c2.8-0.4 5.5-0.7 8.2-0.7s5.5 0.2 8.3 0.7c0.4 2.8 0.7 5.6 0.7 8.2 0 2.8-0.2 5.5-0.7 8.3-2.8 0.4-5.6 0.7-8.2 0.7-2.8-0.1-5.5-0.3-8.3-0.7zm-0.4-80.7c2.9-0.4 5.8-0.7 8.6-0.7 2.9 0 5.8 0.2 8.8 0.7l-1.1 54.9c-2.6 0.4-5.1 0.7-7.5 0.7-2.5 0-5.1-0.2-7.6-0.7z" fill="currentColor"/>
+                            <path d="m150 0c-82.8 0-150 67.2-150 150s67.2 150 150 150 150-67.2 150-150-67.2-150-150-150zm0 285c-74.6 0-135-60.4-135-135s60.4-135 135-135 135 60.4 135 135-60.4 135-135 135z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-header">
+                            <h3>osu!</h3>
+                            <span class="expand-hint">click to expand</span>
+                        </div>
+                    <div class="game-content">
+                        <div class="game-buttons">
+                            <a href="https://osu.ppy.sh/users/uwuclxdy" class="game-btn" target="_blank" rel="noopener">profile</a>
+                            <a href="https://akatsuki.gg/u/uwuclxdy" class="game-btn" target="_blank" rel="noopener">akatsuki</a>
+                        </div>
+                        <p class="game-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula tortor vitae nisi consectetur, vel tincidunt mauris pellentesque. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                        </p>
+                        </div>
+                    </div>
+                </div>
 
-    <script src="/scripts/main.js"></script>
+                <div class="game-card" data-game="rhythia">
+                    <div class="game-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 22V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 7L12 12L22 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-header">
+                            <h3>rhythia</h3>
+                            <span class="expand-hint">click to expand</span>
+                        </div>
+                    <div class="game-content">
+                        <div class="game-buttons">
+                            <a href="#" class="game-btn" target="_blank" rel="noopener">profile</a>
+                        </div>
+                        <p class="game-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula tortor vitae nisi consectetur, vel tincidunt mauris pellentesque. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-game="genshin">
+                    <div class="game-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" fill="currentColor"/>
+                            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-header">
+                            <h3>Genshin</h3>
+                            <span class="expand-hint">click to expand</span>
+                        </div>
+                    <div class="game-content">
+                        <p class="game-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula tortor vitae nisi consectetur, vel tincidunt mauris pellentesque. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="game-card" data-game="minecraft">
+                    <div class="game-icon">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="3" width="6" height="6" fill="currentColor"/>
+                            <rect x="3" y="15" width="6" height="6" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="15" y="3" width="6" height="6" stroke="currentColor" stroke-width="1.5"/>
+                            <rect x="15" y="15" width="6" height="6" fill="currentColor"/>
+                            <rect x="9" y="9" width="6" height="6" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <div class="game-info">
+                        <div class="game-header">
+                            <h3>Minecraft</h3>
+                            <span class="expand-hint">click to expand</span>
+                        </div>
+                    <div class="game-content">
+                        <div class="game-buttons">
+                            <a href="#" class="game-btn" target="_blank" rel="noopener">hypixel stats</a>
+                        </div>
+                        <p class="game-description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula tortor vitae nisi consectetur, vel tincidunt mauris pellentesque. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section id="projects">
+            <h2>notable repos <span class="subtext">//half broken slop</span></h2>
+            <div class="projects-grid" id="projects-container">
+                <div class="project-loading">
+                    <div class="spinner"></div>
+                    <p>fetching repos from my fembussy...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>socials <span class="subtext">//same user everywhere xd</span></h2>
+            <div class="socials-grid">
+                <a href="https://osu.ppy.sh/users/22160097" class="social-card" target="_blank" rel="noopener">
+                    <div class="social-icon">
+                        <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                            <path id="osu_x21__x5F_txt_x5F_Path_2_" class="st0" d="m75.1 181.4c-4.7 0-8.8-0.8-12.3-2.3s-6.4-3.7-8.6-6.4c-2.3-2.7-4-5.9-5.2-9.6s-1.7-7.6-1.7-11.9 0.6-8.3 1.7-12c1.2-3.7 2.9-7 5.2-9.7s5.2-4.9 8.6-6.5 7.6-2.4 12.3-2.4 8.8 0.8 12.3 2.4 6.4 3.7 8.8 6.5c2.3 2.7 4 6 5.2 9.7 1.1 3.7 1.7 7.7 1.7 12s-0.6 8.2-1.7 11.9-2.8 6.9-5.2 9.6c-2.3 2.7-5.2 4.9-8.8 6.4-3.4 1.6-7.6 2.3-12.3 2.3zm0-12.1c4.2 0 7.2-1.6 9-4.7s2.7-7.6 2.7-13.4-0.9-10.3-2.7-13.4-4.8-4.7-9-4.7c-4.1 0-7.1 1.6-8.9 4.7s-2.7 7.6-2.7 13.4 0.9 10.3 2.7 13.4c1.8 3.2 4.8 4.7 8.9 4.7zm51.8-14.5c-4.2-1.2-7.5-3-9.8-5.3-2.4-2.4-3.5-5.9-3.5-10.6 0-5.7 2-10.1 6.1-13.4 4.1-3.2 9.6-4.8 16.7-4.8 2.9 0 5.8 0.3 8.6 0.8s5.7 1.3 8.6 2.4c-0.2 1.9-0.5 4-1.1 6.1s-1.3 3.9-2.1 5.5c-1.8-0.7-3.8-1.4-5.9-2-2.2-0.6-4.5-0.8-6.8-0.8-2.5 0-4.5 0.4-5.9 1.2s-2.1 2-2.1 3.8c0 1.6 0.5 2.8 1.5 3.5s2.4 1.3 4.3 1.9l6.4 1.9c2.1 0.6 4 1.3 5.7 2.2s3.1 1.9 4.3 3.2 2.1 2.8 2.8 4.7 1 4.2 1 6.8c0 2.8-0.6 5.3-1.7 7.7-1.2 2.4-2.8 4.5-5 6.2-2.2 1.8-4.9 3.1-8 4.2-3.1 1-6.7 1.5-10.7 1.5-1.8 0-3.4-0.1-4.9-0.2s-2.9-0.3-4.3-0.6-2.7-0.6-4.1-1c-1.3-0.4-2.8-0.9-4.4-1.5 0.1-2 0.5-4.1 1.1-6.1 0.6-2.1 1.3-4.1 2.2-6 2.5 1 4.8 1.7 7 2.2s4.5 0.7 6.9 0.7c1 0 2.2-0.1 3.4-0.3s2.4-0.5 3.4-1 1.9-1.1 2.6-1.9 1.1-1.8 1.1-3.1c0-1.8-0.5-3.1-1.6-3.9s-2.6-1.5-4.5-2.1zm39.3-32.7c2.7-0.4 5.3-0.7 8-0.7 2.6 0 5.3 0.2 8 0.7v30.7c0 3.1 0.2 5.6 0.7 7.6s1.2 3.6 2.2 4.7c1 1.2 2.3 2 3.8 2.5s3.3 0.7 5.3 0.7c2.8 0 5.1-0.3 7-0.8v-45.4c2.7-0.4 5.3-0.7 7.9-0.7s5.3 0.2 8 0.7v55.8c-2.4 0.8-5.6 1.6-9.5 2.4s-8 1.2-12.3 1.2c-3.8 0-7.5-0.3-11-0.9s-6.6-1.9-9.3-3.8-4.8-4.8-6.3-8.5c-1.6-3.7-2.4-8.7-2.4-14.9v-31.3zm65.9 58c-0.4-2.8-0.7-5.5-0.7-8.2s0.2-5.5 0.7-8.3c2.8-0.4 5.5-0.7 8.2-0.7s5.5 0.2 8.3 0.7c0.4 2.8 0.7 5.6 0.7 8.2 0 2.8-0.2 5.5-0.7 8.3-2.8 0.4-5.6 0.7-8.2 0.7-2.8-0.1-5.5-0.3-8.3-0.7zm-0.4-80.7c2.9-0.4 5.8-0.7 8.6-0.7 2.9 0 5.8 0.2 8.8 0.7l-1.1 54.9c-2.6 0.4-5.1 0.7-7.5 0.7-2.5 0-5.1-0.2-7.6-0.7z" fill="currentColor"/>
+                            <path id="Rim_6_" class="st0" d="m150 0c-82.8 0-150 67.2-150 150s67.2 150 150 150 150-67.2 150-150-67.2-150-150-150zm0 285c-74.6 0-135-60.4-135-135s60.4-135 135-135 135 60.4 135 135-60.4 135-135 135z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <div class="social-content">
+                        <h3>osu!</h3>
+                        <p>imhard</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/uwuclxdy" class="social-card" target="_blank" rel="noopener">
+                    <div class="social-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+                    </div>
+                    <div class="social-content">
+                        <h3>github</h3>
+                        <p>@uwuclxdy</p>
+                    </div>
+                </a>
+
+                <a href="https://tiktok.com/@uwuclxdy" class="social-card" target="_blank" rel="noopener">
+                    <div class="social-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                        </svg>
+                    </div>
+                    <div class="social-content">
+                        <h3>tiktok</h3>
+                        <p>@uwuclxdy</p>
+                    </div>
+                </a>
+
+                <div class="social-card discord-card">
+                    <div class="social-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                        </svg>
+                    </div>
+                    <div class="social-content">
+                        <h3>discord</h3>
+                        <p>uwuclxdy</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>made with <span class="highlight">rust</span> (jk, plain html lol)</p>
+            <p class="footer-meta">© 2026 <span class="highlight">uwuclxdy</span> x Claude <span class="highlight">4.5 Sonnet</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
