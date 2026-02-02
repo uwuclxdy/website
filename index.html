@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="hero-text">
-                    <h1>haii, i'm <span class="highlight">cloudy</span>!</h1>
+                    <h1>haii, i'm <span class="highlight animate">cloudy</span>!</h1>
                     <p class="subtitle">and <span class="highlight">claude</span> is me~ :3</p>
                     <div class="badges">
                         <a href="/osu/skins">
@@ -49,8 +49,9 @@
                         </a>
                         <a href="https://github.com/uwuclxdy">
                             <div class="badge" title="Total GitHub Stars">
+                                <span class="badge-label"></span>
                                 <span class="badge-icon">⭐</span>
-                                <span class="badge-label">fetching...</span>
+                                <span class="badge-label badge-label-2">fetching...</span>
                             </div>
                         </a>
                     </div>
@@ -58,9 +59,8 @@
                         i LOVE <span class="tech">rust</span>, im proficient with <span class="tech">c#</span> ig
                         and know a bit of <span class="tech">python</span> and <span class="tech">bash</span>
                     </p>
-                    <p class="bio" style="text-align: center;">🔄 translating 🔄</p>
-                    <p class="bio" style="text-align: center;">im a femboy furry larper who don't know shi 😂✌️
-                    </p>
+                    <button class="translate-btn" id="translateBtn">translate</button>
+                    <p class="bio translated-text" id="translatedText" style="display: none;">im a femboy furry larper who don't know shi 😂✌️</p>
                 </div>
             </div>
         </section>
@@ -172,6 +172,16 @@
                 <div class="project-loading">
                     <div class="spinner"></div>
                     <p>fetching repos from my fembussy...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="forks">
+            <h2>forks <span class="subtext">//my contribs to other projects~</span></h2>
+            <div class="forks-grid" id="forks-container">
+                <div class="project-loading">
+                    <div class="spinner"></div>
+                    <p>fetching forks...</p>
                 </div>
             </div>
         </section>
