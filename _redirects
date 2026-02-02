@@ -1,4 +1,5 @@
 # Pretty URLs - remove .html extension
 /osu/skins  /osu/skins/index.html  200
+/osu/tools  /osu/skins/index.html  200
 /osu  /index.html  200
 /*  /index.html  200
