@@ -138,6 +138,12 @@ nav {
     width: 100%;
 }
 
+.nav-badges {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1rem;
+}
+
 .nav-left {
     display: flex;
     gap: var(--spacing-md);
@@ -164,7 +170,7 @@ main section {
 
 /* Hero Section */
 #hero {
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-xl) 0 5rem 0;
     min-height: calc(100vh - 200px);
     display: flex;
     align-items: center;
@@ -179,41 +185,23 @@ main section {
 
 .pfp-container {
     position: relative;
+    width: 100%;
 }
 
-.pfp-placeholder {
-    width: 280px;
-    height: 280px;
+.pfp {
+    width: 100%;
+    aspect-ratio: 1;
     background: var(--ctp-surface0);
     border: 2px solid var(--ctp-surface1);
     position: relative;
-    overflow: hidden;
     transition: border-color 0.3s ease;
+    display: block;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
-.pfp-placeholder:hover {
+.pfp:hover {
     border-color: var(--primary);
-}
-
-.pfp-placeholder svg {
-    width: 100%;
-    height: 100%;
-}
-
-.pfp-hint {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--ctp-overlay0);
-    opacity: 0;
-    transition: opacity 0.2s ease;
-}
-
-.pfp-placeholder:hover .pfp-hint {
-    opacity: 1;
 }
 
 .hero-text h1 {
@@ -495,7 +483,7 @@ main section > h2.is-stuck {
 
 /* Projects Section */
 #projects {
-    margin-top: var(--spacing-xl);
+    margin-top: 6rem;
     padding: var(--spacing-xl) 0;
 }
 
@@ -689,14 +677,18 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
+    .nav-badges {
+        display: none;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         gap: var(--spacing-lg);
         text-align: center;
     }
 
-    .pfp-placeholder {
+    .pfp {
         margin: 0 auto;
     }
 
