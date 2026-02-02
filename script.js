@@ -220,7 +220,7 @@ function setupParallax() {
         if (!hero || !heroContent) return;
         const scrolled = window.pageYOffset;
         const heroHeight = hero.offsetHeight || 1;
-        const fadeDistance = heroHeight * 1.2;
+        const fadeDistance = heroHeight * 4;
         const progress = Math.min(Math.max(scrolled / fadeDistance, 0), 1);
 
         heroContent.style.opacity = `${1 - progress}`;
