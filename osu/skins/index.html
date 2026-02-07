@@ -44,8 +44,7 @@
         }
 
         .skin-card:hover {
-            border-color: var(--primary);
-            transform: translateY(-3px);
+            border-color: var(--secondary);
         }
 
         .skin-preview-container {
@@ -64,14 +63,14 @@
         }
 
         .skin-card:hover .skin-preview {
-            transform: scale(1.05);
+            transform: scale(1.01);
         }
 
         .skin-version-badge {
             position: absolute;
             top: var(--spacing-sm);
             right: var(--spacing-sm);
-            background: var(--primary);
+            background: var(--secondary);
             color: var(--ctp-base);
             padding: 4px 8px;
             font-size: 0.75rem;
@@ -89,7 +88,7 @@
 
         .skin-info h2 {
             font-size: 1.25rem;
-            color: var(--primary);
+            color: var(--secondary);
             margin: 0;
             font-family: var(--font-mono);
         }
@@ -135,24 +134,24 @@
         }
 
         .skin-btn-primary {
-            background: var(--primary);
+            background: var(--secondary);
             color: var(--ctp-base);
-            border-color: var(--primary);
+            border-color: var(--secondary);
         }
 
         .skin-btn-primary:hover {
-            background: var(--primary-hover);
-            border-color: var(--primary-hover);
+            background: var(--secondary-hover);
+            border-color: var(--secondary-hover);
         }
 
         .skin-btn-secondary {
             background: transparent;
-            color: var(--primary);
-            border-color: var(--primary);
+            color: var(--secondary);
+            border-color: var(--secondary);
         }
 
         .skin-btn-secondary:hover {
-            background: var(--primary-dim);
+            background: var(--secondary-dim);
         }
 
         .back-link {
@@ -167,7 +166,7 @@
         }
 
         .back-link:hover {
-            color: var(--primary);
+            color: var(--secondary);
         }
 
         @media (max-width: 768px) {
@@ -199,6 +198,17 @@
             <div class="nav-right">
                 <a href="/#projects">repos</a>
                 <a href="/#contact">socials</a>
+                <div class="nav-badges">
+                    <a href="/osu/skins" class="badge" title="skins">
+                        <div class="badge-icon">
+                            <svg style="color: var(--secondary)" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="150" cy="150" r="140" stroke="currentColor" stroke-width="20" fill="none" />
+                                <text x="150" y="170" text-anchor="middle" font-family="var(--font-mono)" font-size="120" fill="currentColor">osu!</text>
+                            </svg>
+                        </div>
+                        <span class="badge-label" style="color: var(--secondary)">SKINS</span>
+                    </a>
+                </div>
             </div>
         </nav>
     </header>

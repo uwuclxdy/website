@@ -20,7 +20,7 @@
     --primary-dim: #e07b5333;
 
     /* Supplementary Colors */
-    --secondary: #04a5e5;  /* Cyan blue - secondary accent */
+    --secondary: #22baf7;
 
     /* Catppuccin Accent Colors */
     --ctp-blue: #89b4fa;
@@ -29,7 +29,7 @@
     --ctp-yellow: #f9e2af;
     --ctp-red: #f38ba8;
     --ctp-mauve: #cba6f7;
-    --ctp-pink: #f5c2e7;
+    --ctp-pink: #ff87df;
 
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -97,11 +97,12 @@ nav {
     font-family: var(--font-mono);
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 .cursor {
     animation: blink 1s infinite;
+    color: var(--secondary);
 }
 
 @keyframes blink {
@@ -218,16 +219,10 @@ main section {
     color: var(--primary);
 }
 
-.highlight.animate {
-    animation: highlightPulse 4s ease-in-out infinite;
-}
-
-.highlight.animate.highlight-animated {
-    animation: none;
-}
-
-.highlight-animated span {
-    animation: highlightPulse 4s ease-in-out infinite;
+.animate span {
+    display: inline-block;
+    color: var(--secondary);
+    transition: color 0.2s ease;
 }
 
 @keyframes highlightPulse {
@@ -269,7 +264,6 @@ main section {
 
 .translate-btn:hover {
     border-color: var(--primary);
-    transform: translateY(-2px);
 }
 
 .translate-btn:disabled {
@@ -284,11 +278,9 @@ main section {
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(10px);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
     }
 }
 
@@ -322,12 +314,31 @@ main section {
 
 .badge:hover {
     border-color: var(--primary);
-    transform: translateY(-2px);
     cursor: pointer;
+}
+
+/* Special styling for osu! skins badge to make it pink */
+.badge[title="skins"] {
+    border-color: var(--ctp-pink);
+}
+
+.badge[title="skins"]:hover {
+    border-color: var(--ctp-pink);
+    box-shadow: 0 0 0 1px var(--ctp-pink);
 }
 
 .badge-icon {
     font-size: 1.25rem;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-icon svg {
+    width: 110%;
+    height: 110%;
 }
 
 .badge-label {

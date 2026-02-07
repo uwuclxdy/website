@@ -439,6 +439,8 @@ function setupTranslateButton() {
 // Split highlight text for animation
 function setupHighlightAnimation() {
     const highlights = document.querySelectorAll('.highlight.animate');
+    const allAnimatedSpans = [];
+
     highlights.forEach(element => {
         const text = element.textContent;
         // Skip if already processed or empty
@@ -451,11 +453,6 @@ function setupHighlightAnimation() {
         text.split('').forEach((char, index) => {
             const span = document.createElement('span');
             span.textContent = char;
-            // Stagger delay by 0.1s per character
-            // Use negative delay so animation starts already in motion (optional, but here we want wave)
-            // Or positive delay to see it ripple.
-            // Negative delay is better for "already running" look, but positive makes the "wave" travel.
-            span.style.animationDelay = `${index * 0.1}s`;
 
             // Preserve spaces
             if (char === ' ') {
@@ -464,6 +461,47 @@ function setupHighlightAnimation() {
             }
 
             element.appendChild(span);
+            allAnimatedSpans.push({
+                el: span,
+                x: 0,
+                y: 0
+            });
+        });
+    });
+
+    if (allAnimatedSpans.length === 0) return;
+
+    const updatePositions = () => {
+        allAnimatedSpans.forEach(item => {
+            const rect = item.el.getBoundingClientRect();
+            item.x = rect.left + rect.width / 2 + window.scrollX;
+            item.y = rect.top + rect.height / 2 + window.scrollY;
+        });
+    };
+
+    // Update positions initially and on changes
+    setTimeout(updatePositions, 100);
+    window.addEventListener('resize', updatePositions);
+    window.addEventListener('scroll', updatePositions);
+
+    // Interaction logic
+    document.addEventListener('mousemove', (e) => {
+        const mouseX = e.pageX;
+        const mouseY = e.pageY;
+        const radius = 300; // Radius of effect
+
+        allAnimatedSpans.forEach(item => {
+            const dx = mouseX - item.x;
+            const dy = mouseY - item.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < radius) {
+                const strength = 1 - (distance / radius);
+                // Mix color based on distance
+                item.el.style.color = `color-mix(in srgb, var(--primary) ${strength * 100}%, var(--secondary))`;
+            } else {
+                item.el.style.color = 'var(--secondary)';
+            }
         });
     });
 }
