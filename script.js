@@ -366,6 +366,26 @@ function setupDiscordCopy() {
     }
 }
 
+// Copy Signal username on click
+function setupSignalCopy() {
+    const signalCard = document.querySelector('.signal-card');
+    if (signalCard) {
+        signalCard.addEventListener('click', () => {
+            navigator.clipboard.writeText('uwuclxdy.64').then(() => {
+                const original = signalCard.querySelector('.social-content p').textContent;
+                signalCard.querySelector('.social-content p').textContent = 'copied to clipboard!';
+
+                setTimeout(() => {
+                    signalCard.querySelector('.social-content p').textContent = original;
+                }, 2000);
+            });
+        });
+
+        signalCard.style.cursor = 'pointer';
+        signalCard.title = 'click to copy username';
+    }
+}
+
 // Easter egg: Konami code
 function setupKonamiCode() {
     const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
@@ -513,6 +533,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupStickyOffset();
     setupParallax();
     setupDiscordCopy();
+    setupSignalCopy();
     setupKonamiCode();
     setupCursorBlink();
     setupHighlightAnimation();
