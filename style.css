@@ -553,10 +553,6 @@ main section > h2.is-stuck {
     cursor: default;
 }
 
-.signal-card {
-    cursor: default;
-}
-
 .social-icon {
     width: 48px;
     height: 48px;
